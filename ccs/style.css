@@ -1,0 +1,267 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #003087; /* Deep blue like Bemister’s */
+    color: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #002060; /* Slightly darker blue */
+}
+
+.top-bar p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.logo img {
+    height: 60px;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #003087;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 20px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff6200; /* Orange accent like Bemister’s */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+}
+
+/* About, Products, Get Built, FAQ Sections */
+.about, .products, .get-built, .faq {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h1, .get-built h1, .faq h1 {
+    color: #003087;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Products Page Specific */
+.sidebar {
+    float: left;
+    width: 25%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    margin-bottom: 10px;
+    color: #003087;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    color: #003087;
+    font-size: 1.5rem;
+}
+
+.product-item p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+/* Get Built Page Specific */
+.get-built form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.get-built label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #003087;
+}
+
+.get-built input, .get-built textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.get-built textarea {
+    height: 150px;
+}
+
+/* FAQ Page Specific */
+.faq details {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.faq summary {
+    font-weight: bold;
+    color: #003087;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #003087;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content .social-icons {
+    margin-top: 10px;
+}
+
+.footer-content .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul ul {
+        position: static;
+        display: none;
+    }
+    nav ul li:hover ul {
+        display: block;
+    }
+    .sidebar {
+        float: none;
+        width: 100%;
+        padding: 20px 0;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
