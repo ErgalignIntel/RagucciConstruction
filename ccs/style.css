@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background-color: #003087; /* Deep blue like Bemister’s */
+    background-color: #005EB8; /* Lighter blue to match logo */
     color: white;
     position: relative;
 }
@@ -19,8 +19,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #002060; /* Slightly darker blue */
+    padding: 10px 30px;
+    background-color: #00C4FF; /* Bright cyan for top bar */
 }
 
 .top-bar p {
@@ -29,7 +29,7 @@ header {
 }
 
 .top-bar a {
-    color: #ff6200;
+    color: white;
     text-decoration: none;
 }
 
@@ -45,14 +45,21 @@ header {
 }
 
 .social-icons a:hover {
-    color: #ff6200;
+    color: #E6F0FA;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px 0;
 }
 
 .logo img {
-    height: 70px;
-    padding: 15px 30px;
-    display: block;
-    margin: 0 auto;
+    width: 600px; /* Fixed width to match logo */
+    height: 200px; /* Fixed height to match logo */
+}
+
+nav {
+    background-color: rgba(0, 94, 184, 0.9); /* Slightly transparent blue */
 }
 
 nav ul {
@@ -62,25 +69,24 @@ nav ul {
     gap: 30px;
     padding: 15px 30px;
     margin: 0;
-    background-color: #003087;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ff6200;
+    color: #00C4FF;
 }
 
 nav ul ul.dropdown {
     display: none;
     position: absolute;
-    background-color: #003087;
+    background-color: #005EB8;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 1000;
@@ -123,20 +129,20 @@ nav ul ul li {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 30px;
 }
 
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #ff6200; /* Orange accent like Bemister’s */
+    background-color: #00C4FF; /* Bright cyan for buttons */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -146,7 +152,7 @@ nav ul ul li {
 }
 
 .cta-button:hover {
-    background-color: #e65c00;
+    background-color: #00A3D6;
 }
 
 /* About, Products, Get Built, FAQ Sections */
@@ -156,15 +162,15 @@ nav ul ul li {
 }
 
 .about h1, .get-built h1, .faq h1 {
-    color: #003087;
-    font-size: 3rem;
+    color: #005EB8;
+    font-size: 3.5rem;
     margin-bottom: 30px;
     text-transform: uppercase;
 }
 
 .about h2 {
-    color: #003087;
-    font-size: 2.5rem;
+    color: #005EB8;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
@@ -186,7 +192,7 @@ nav ul ul li {
     flex: 1;
     min-width: 250px;
     padding: 30px;
-    background-color: #f4f4f4;
+    background-color: #E6F0FA; /* Soft blue for sidebar */
     border-radius: 10px;
     text-align: left;
 }
@@ -197,8 +203,8 @@ nav ul ul li {
 
 .filter-group h4 {
     margin-bottom: 15px;
-    color: #003087;
-    font-size: 1.2rem;
+    color: #005EB8;
+    font-size: 1.3rem;
 }
 
 .filter-group label {
@@ -249,7 +255,7 @@ nav ul ul li {
 }
 
 .product-item h3 {
-    color: #003087;
+    color: #005EB8;
     font-size: 1.8rem;
     margin-bottom: 10px;
 }
@@ -261,7 +267,7 @@ nav ul ul li {
 
 .product-item .price {
     font-weight: bold;
-    color: #ff6200;
+    color: #00C4FF;
     margin: 10px 0;
 }
 
@@ -300,7 +306,7 @@ nav ul ul li {
     display: block;
     margin: 15px 0 5px;
     font-weight: bold;
-    color: #003087;
+    color: #005EB8;
 }
 
 .get-built input, .get-built textarea {
@@ -320,7 +326,7 @@ nav ul ul li {
 
 /* FAQ Page Specific */
 .faq {
-    background-color: #f4f4f4;
+    background-color: #E6F0FA; /* Soft blue for FAQ section */
     border-radius: 10px;
 }
 
@@ -334,9 +340,9 @@ nav ul ul li {
 
 .faq summary {
     font-weight: bold;
-    color: #003087;
+    color: #005EB8;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 10px 0;
 }
 
@@ -348,7 +354,7 @@ nav ul ul li {
 
 /* Footer */
 footer {
-    background-color: #003087;
+    background-color: #005EB8;
     color: white;
     text-align: center;
     padding: 40px 30px;
@@ -360,7 +366,7 @@ footer {
 }
 
 .footer-content a {
-    color: #ff6200;
+    color: #00C4FF;
     text-decoration: none;
 }
 
@@ -415,15 +421,20 @@ footer {
         padding: 150px 20px;
     }
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     .about h1, .get-built h1, .faq h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .about h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+    .logo img {
+        width: 100%;
+        height: auto;
+        max-width: 600px;
     }
 }
