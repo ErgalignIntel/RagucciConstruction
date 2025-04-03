@@ -1,4 +1,4 @@
-/* styles.css - Updated with Ragucci Construction Brand Colors */
+/* styles.css - FULL REPLACEMENT CODE */
 :root {
     /* Official Color Scheme */
     --ragucci-dark-blue: #002674;
@@ -11,7 +11,27 @@
     --text-dark: #2a2a2a;
 }
 
-/* Enhanced Navigation */
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Navigation */
 header {
     background: var(--ragucci-dark-blue);
     padding: 1.5rem 0;
@@ -28,6 +48,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+}
+
+.logo {
+    max-width: 220px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .nav-links {
@@ -54,21 +80,25 @@ nav {
     transform: translateY(-2px);
 }
 
-/* Social Media Buttons (Existing - Enhanced) */
+/* Social Media Buttons (Keep Existing) */
 .social-btn {
     background: var(--ragucci-silver);
     color: var(--ragucci-dark-blue);
     padding: 0.6rem 1.2rem;
     border-radius: 20px;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .social-btn:hover {
     background: var(--ragucci-medium-blue);
     color: var(--ragucci-white);
+    transform: scale(1.05);
 }
 
-/* Hero Section with Water-Themed Effects */
+/* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 38, 116, 0.85), rgba(0, 38, 116, 0.85)),
                 url('construction-bg.jpg') center/cover;
@@ -78,6 +108,7 @@ nav {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-bottom: 4rem;
 }
 
 .hero:after {
@@ -91,7 +122,44 @@ nav {
     transform: rotate(-3deg);
 }
 
-/* Mobile Optimization */
+.hero-content {
+    text-align: center;
+    color: var(--ragucci-white);
+    z-index: 1;
+    padding: 2rem;
+}
+
+/* Main Content (All Pages) */
+.main-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Buttons */
+.btn {
+    background: var(--ragucci-dark-blue);
+    color: var(--ragucci-silver);
+    padding: 12px 35px;
+    border-radius: 30px;
+    border: 2px solid var(--ragucci-medium-blue);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.btn:hover {
+    background: var(--ragucci-medium-blue);
+    color: var(--ragucci-white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -103,11 +171,20 @@ nav {
         justify-content: center;
         margin-top: 1rem;
         gap: 1rem;
+        display: none;
     }
 
-    .nav-links a {
-        padding: 0.6rem 1rem;
-        font-size: 0.85rem;
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--ragucci-silver);
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 
     .hero {
@@ -115,21 +192,16 @@ nav {
     }
 }
 
-/* Water-Themed Button Enhancements */
-.btn {
+/* Footer (Add to All Pages) */
+footer {
     background: var(--ragucci-dark-blue);
     color: var(--ragucci-silver);
-    padding: 12px 35px;
-    border-radius: 30px;
-    border: 2px solid var(--ragucci-medium-blue);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    padding: 2rem;
+    margin-top: auto;
 }
 
-.btn:hover {
-    background: var(--ragucci-medium-blue);
-    color: var(--ragucci-white);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
